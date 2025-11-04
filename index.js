@@ -22,7 +22,7 @@ app.post('/kandang', async (req, res) => {
 // READ
 app.get('/kandang', async (req, res) => {
   try {
-    const film = await db.kandang.findAll();
+    const kandang = await db.kandang.findAll();
     res.send(kandang);
   } catch (error) {
     res.status(500).send({ message: error.message });

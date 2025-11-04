@@ -1,4 +1,4 @@
-odule.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   const kandang = sequelize.define('kandang', {
     ID: {
       type: DataTypes.INTEGER,
@@ -14,7 +14,7 @@ odule.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     Usia_hewan: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     Jenis_hewan: {
@@ -24,7 +24,7 @@ odule.exports = (sequelize, DataTypes) => {
     Tahun_lahir: {
       type: DataTypes.STRING,
       allowNull: false
-    },
+    }
 
   }, {
     tableName: 'kandang',
@@ -32,5 +32,5 @@ odule.exports = (sequelize, DataTypes) => {
     freezeTableName: true
   });
 
-  return film;
+  return kandang;
 };
